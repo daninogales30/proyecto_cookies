@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Cookies</title>
+    <link rel="stylesheet" href="../static/administrar_cookies.css">
+</head>
+<body>
+    <h1>Administrar Cookies</h1>
+    <p>Actualmente puedes gestionar tu consentimiento sobre el uso de cookies.</p>
+    <form method="POST" action={{ url_for('restablecer_cookies') }}>
+        <button type="submit">Restablecer decisión sobre cookies</button>
+    </form>
+    <a href={{ url_for('inicio') }}>Volver a la página principal</a>
+</body>
+</html>

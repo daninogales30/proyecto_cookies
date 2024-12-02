@@ -1,0 +1,66 @@
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 50px;
+            color: #333;
+        }
+
+        p {
+            margin: 20px;
+        }
+
+        a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        #cookies {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #cookies span {
+            font-size: 14px;
+        }
+
+        #cookies form button {
+            padding: 8px 16px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        #cookies button[value="aceptar"] {
+            margin-top: 5px;
+            background-color: #28a745;
+            color: white;
+        }
+
+        #cookies button[value="rechazar"] {
+            margin-top: 5px;
+            background-color: #dc3545;
+            color: white;
+        }
+
+        #cookies button:hover {
+            opacity: 0.8;
+        }

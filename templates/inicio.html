@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Cookies</title>
+    <link rel="stylesheet" href="../static/inicio.css">
+</head>
+<body>
+    <h1>Bienvenido a nuestra página</h1>
+    <p>Explora nuestro contenido.</p>
+
+    {% if not consentimiento_cookies %}
+        <div id="cookies">
+            <span>Aqui detallada toda nuestra politica de cookies, <a href="https://i.pinimg.com/474x/c5/43/cd/c543cd798d203442a63ee559dd3e0d7f.jpg">lee la politica</a></span>
+            <form method="POST" action={{ url_for('establecer_cookies') }}>
+            <button type="submit" name="accion" value="aceptar">Aceptar</button>
+            <button type="submit" name="accion" value="rechazar">Rechazar</button>
+        </form>
+        </div>
+    {% else %}
+        <p>Puede gestionar las cookies <a href={{ url_for('administrar_cookies') }}>pinchando aqui</a></p>
+    {% endif %}
+
+    {% if consentimiento_cookies == "aceptado" %}
+        <p>Tienes contenido exclusivo por aceptar las cookies gorrion, metete en el enlace del contenido exclusivo <a
+                href="https://pbs.twimg.com/media/EeiZic8U4AAjzqb.jpg">pinchando aqui</a>.</p>
+    {% elif consentimiento_cookies == "rechazado"%}
+        <p>Tu te lo pierdes mostro</p>
+    {% endif %}
+
+</body>
+</html>
